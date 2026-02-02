@@ -89,12 +89,12 @@
   --color-input: 217 33% 17%;
   --color-ring: 173 80% 45%;
 
-  --gradient-hero: linear-gradient(
-    135deg,
-    hsl(222 47% 6%) 0%,
-    hsl(222 40% 10%) 50%,
-    hsl(222 47% 6%) 100%
-  );
+--gradient-hero: linear-gradient(
+  135deg,
+  hsl(222 47% 6%) 0%,
+  hsl(222 40% 10%) 50%,
+  hsl(222 47% 6%) 100%
+);
 
   --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
   --shadow-card-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4);

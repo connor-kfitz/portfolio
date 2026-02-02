@@ -9,13 +9,9 @@ export default function Hero() {
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
-      style={{ background: 'var(--hero-gradient)' }}
+      style={{ background: 'var(--gradient-hero)' }}
     >
 
-      {/* Subtle decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl"/>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"/>
-      
       <div className="section-container text-center relative z-10">
         <div className="animate-fade-in">
           

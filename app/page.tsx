@@ -1,5 +1,6 @@
 import Hero from "./components/home/Hero";
 import Projects from "./components/home/Projects";
+import About from "./components/home/About";
 
 export default async function Home() {
 
@@ -11,6 +12,7 @@ export default async function Home() {
     <main>
       <Hero/>
       <Projects projects={await projects.json()}/>
+      <About/>
     </main>
   )
 }
