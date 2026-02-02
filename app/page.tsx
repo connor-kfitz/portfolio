@@ -1,9 +1,16 @@
-import HeroSection from "./components/home/HeroSection";
+import Hero from "./components/home/Hero";
+import Projects from "./components/home/Projects";
 
-export default function Home() {
+export default async function Home() {
+
+  const projects = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`, {
+    cache: 'no-store'
+  });
+
   return (
     <main>
-      <HeroSection/>
+      <Hero/>
+      <Projects projects={await projects.json()}/>
     </main>
   )
 }

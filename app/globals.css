@@ -1,41 +1,221 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  --color-border: #f1f4f7;
-  --hero-gradient: linear-gradient(135deg, hsl(215 25% 97%) 0%, hsl(173 30% 95%) 50%, hsl(215 25% 97%) 100%);
-}
+/* ───────────────────────────────────────────── */
+/* Theme tokens */
+/* ───────────────────────────────────────────── */
 
 @theme {
-  --color-primary: #14b8a5;
-  --color-primary-foreground: #ffffff;
+  --color-background: hsl(210 20% 98%);
+  --color-foreground: hsl(222 47% 11%);
 
-  --color-secondary: #f0f3f5;
-  --color-secondary-foreground: #0f2129;
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222 47% 11%);
 
-  --color-muted: #e9edf1;
-  --color-muted-foreground: #647b76;
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(222 47% 11%);
 
-  --color-accent: #14b8a5;
-  --color-accent-foreground: #ffffff;
+  --color-primary: hsl(173 80% 40%);
+  --color-primary-foreground: hsl(0 0% 100%);
 
-  --color-destructive: #ef4343;
-  --color-destructive-foreground: #ffffff;
+  --color-secondary: hsl(215 20% 95%);
+  --color-secondary-foreground: hsl(222 47% 11%);
 
-  --color-border: #f1f4f7;
+  --color-muted: hsl(215 20% 93%);
+  --color-muted-foreground: hsl(215 16% 47%);
+
+  --color-accent: hsl(173 80% 40%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --color-border: hsl(214 32% 91%);
+  --color-input: hsl(214 32% 91%);
+  --color-ring: hsl(173 80% 40%);
+
+  --shadow-card: 0 4px 6px -1px hsl(222 47% 11% / 0.05),
+                 0 2px 4px -2px hsl(222 47% 11% / 0.05);
+
+  --shadow-card-hover: 0 20px 25px -5px hsl(222 47% 11% / 0.1),
+                       0 8px 10px -6px hsl(222 47% 11% / 0.1);
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(215 25% 97%) 0%,
+    hsl(173 30% 95%) 50%,
+    hsl(215 25% 97%) 100%
+  );
+
+  --color-sidebar-background: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --color-sidebar-primary: hsl(240 5.9% 10%);
+  --color-sidebar-primary-foreground: hsl(0 0% 98%);
+  --color-sidebar-accent: hsl(240 4.8% 95.9%);
+  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --color-sidebar-border: hsl(220 13% 91%);
+  --color-sidebar-ring: hsl(173 80% 40%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ───────────────────────────────────────────── */
+/* Dark mode */
+/* ───────────────────────────────────────────── */
+
+.dark {
+  --color-background: 222 47% 6%;
+  --color-foreground: 210 40% 98%;
+
+  --color-card: 222 47% 8%;
+  --color-card-foreground: 210 40% 98%;
+
+  --color-popover: 222 47% 8%;
+  --color-popover-foreground: 210 40% 98%;
+
+  --color-primary: 173 80% 45%;
+  --color-primary-foreground: 222 47% 6%;
+
+  --color-secondary: 217 33% 17%;
+  --color-secondary-foreground: 210 40% 98%;
+
+  --color-muted: 217 33% 17%;
+  --color-muted-foreground: 215 20% 65%;
+
+  --color-accent: 173 80% 45%;
+  --color-accent-foreground: 222 47% 6%;
+
+  --color-destructive: 0 63% 31%;
+  --color-destructive-foreground: 210 40% 98%;
+
+  --color-border: 217 33% 17%;
+  --color-input: 217 33% 17%;
+  --color-ring: 173 80% 45%;
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(222 47% 6%) 0%,
+    hsl(222 40% 10%) 50%,
+    hsl(222 47% 6%) 100%
+  );
+
+  --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
+  --shadow-card-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4);
+
+  --color-sidebar-background: 240 5.9% 10%;
+  --color-sidebar-foreground: 240 4.8% 95.9%;
+  --color-sidebar-primary: 173 80% 45%;
+  --color-sidebar-primary-foreground: 0 0% 100%;
+  --color-sidebar-accent: 240 3.7% 15.9%;
+  --color-sidebar-accent-foreground: 240 4.8% 95.9%;
+  --color-sidebar-border: 240 3.7% 15.9%;
+  --color-sidebar-ring: 173 80% 45%;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ───────────────────────────────────────────── */
+/* Base styles */
+/* ───────────────────────────────────────────── */
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: hsl(var(--color-border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: hsl(var(--color-background));
+    color: hsl(var(--color-foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* ───────────────────────────────────────────── */
+/* Components */
+/* ───────────────────────────────────────────── */
+
+@layer components {
+  .section-container {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    padding-block: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-container {
+      padding-block: 7rem;
+    }
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    color: hsl(var(--color-muted-foreground));
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+
+  .card-hover {
+    transition: all 300ms ease-out;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .gradient-text {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--color-primary)),
+      hsl(var(--color-accent))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-primary {
+    background-color: hsl(var(--color-primary));
+    color: hsl(var(--color-primary-foreground));
+    transition: opacity 200ms ease;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-outline {
+    border: 2px solid hsl(var(--color-primary));
+    color: hsl(var(--color-primary));
+    transition: all 200ms ease;
+  }
+
+  .btn-outline:hover {
+    background-color: hsl(var(--color-primary));
+    color: hsl(var(--color-primary-foreground));
+  }
+}
+
+/* ───────────────────────────────────────────── */
+/* Utilities */
+/* ───────────────────────────────────────────── */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

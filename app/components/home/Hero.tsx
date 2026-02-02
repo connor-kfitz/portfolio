@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowDown } from 'lucide-react';
 import { githubUrl, linkedinUrl } from '@/app/lib/constants';
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <section
       id="hero"
@@ -72,6 +72,7 @@ export default function HeroSection() {
       >
         <ArrowDown className="w-6 h-6 text-muted-foreground"/>
       </Link>
+      
     </section>
   )
 }

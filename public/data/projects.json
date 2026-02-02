@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "South West Exposures",
+    "description": "Medical isotope shield catalouge and inquiry system. Custom admin CMS for managing products and inquiries. Built for scalability",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    "liveUrl": "https://www.swexposures.com",
+    "repoUrl": "https://github.com/connor-kfitz/south-west-exposures"
+  },
+  {
+    "id": "2",
+    "name": "2048 Clone",
+    "description": "Clone of the popular 2048 game built with React and SASS. Features smooth animations and responsive design.",
+    "technologies": ["React", "SCSS"],
+    "liveUrl": "https://connor-kfitz.github.io/2048-clone",
+    "repoUrl": "https://github.com/connor-kfitz/2048-clone"
+  },
+  {
+    "id": "3",
+    "name": "Furniture Design Landing Page",
+    "description": "Furniture design application landing page built with React and SCSS. Showcases products, prices, and testimonials.",
+    "technologies": ["React", "SCSS"],
+    "liveUrl": "https://connor-kfitz.github.io/furniture-design-application",
+    "repoUrl": "https://github.com/connor-kfitz/furniture-design-application"
+  },
+  {
+    "id": "4",
+    "name": "E-Commerce Dashboard UI",
+    "description": "E-Commerce dashboard user interface built with HTML and SCSS. Features responsive design and minor effects.",
+    "technologies": ["HTML", "SCSS"],
+    "liveUrl": "https://connor-kfitz.github.io/e-commerce-dashboard",
+    "repoUrl": "https://github.com/connor-kfitz/e-commerce-dashboard"
+  }
+]
