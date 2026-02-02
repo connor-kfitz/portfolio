@@ -1,4 +1,5 @@
 import { skills } from "@/app/lib/constants";
+import { getYearsOfExperience } from "@/app/lib/utils";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
             <h2 className="section-title text-foreground">About Me</h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I&apos;m a software developer with 3+ years of experience building web and mobile applications. 
+                I&apos;m a software developer with {getYearsOfExperience(2022)}+ years of experience building web and mobile applications. 
                 I focus on solving real problems with clear, practical solutions.
               </p>
               <p>
