@@ -25,7 +25,7 @@ export default function Projects({ projects }: ProjectsProps) {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="group bg-card rounded-2xl p-8 card-hover border border-border"
+              className="cursor-pointer group bg-card rounded-2xl p-8 card-hover border border-border"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex flex-col h-full">
@@ -70,5 +70,5 @@ export default function Projects({ projects }: ProjectsProps) {
         
       </div>
     </section>
-  )
+  );
 }

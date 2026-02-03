@@ -6,3 +6,9 @@ type Project = {
   liveUrl: string;
   repoUrl: string;
 }
+
+type ModalErrorState = {
+  open: boolean;
+  title: string;
+  message: string;
+}

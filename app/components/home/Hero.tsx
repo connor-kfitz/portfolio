@@ -70,5 +70,5 @@ export default function Hero() {
       </Link>
       
     </section>
-  )
+  );
 }
