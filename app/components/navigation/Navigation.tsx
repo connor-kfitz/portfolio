@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { scrollTo } from '@/app/lib/utils';
 
 export default function Navigation() {
   
@@ -41,21 +42,21 @@ export default function Navigation() {
         {!onProjectsRoute
           // Home Page Nav Links
           ? <>
-              <Link
-                href="#hero"
-                className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              <button
+                onClick={() => scrollTo('hero')}
+                className="cursor-pointer text-xl font-bold text-foreground hover:text-primary transition-colors"
               >
                 CF
-              </Link>
+              </button>
               <div className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
-                  <Link
+                  <button
                     key={link.name}
-                    href={link.href}
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => scrollTo(link.href.replace('#', ''))}
+                    className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </button>
                 ))}
               </div>
             </>

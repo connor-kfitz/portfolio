@@ -1,8 +1,11 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { ArrowDown } from 'lucide-react';
 import { githubUrl, linkedinUrl } from '@/app/lib/constants';
+import { scrollTo } from '@/app/lib/utils';
 
 export default function Hero() {
   return (
@@ -25,18 +28,18 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Link
-              href="#projects"
-              className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
+            <button
+              onClick={() => scrollTo('projects')}
+              className="cursor-pointer px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
             >
               View My Work
-            </Link>
-            <Link
-              href="#contact"
-              className="px-8 py-4 border-2 border-foreground/20 text-foreground rounded-xl font-medium hover:border-primary hover:text-primary transition-all"
+            </button>
+            <button
+              onClick={() => scrollTo('contact')}
+              className="cursor-pointer px-8 py-4 border-2 border-foreground/20 text-foreground rounded-xl font-medium hover:border-primary hover:text-primary transition-all"
             >
               Get in Touch
-            </Link>
+            </button>
           </div>
           
           {/* Social Links */}
@@ -62,12 +65,13 @@ export default function Hero() {
       </div>
       
       {/* Navigation Arrow */}
-      <Link
-        href="#projects"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float"
+      <button
+        onClick={() => scrollTo('projects')}
+        className="cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2 animate-float"
+        aria-label="Scroll to projects"
       >
         <ArrowDown className="w-6 h-6 text-muted-foreground"/>
-      </Link>
+      </button>
       
     </section>
   );

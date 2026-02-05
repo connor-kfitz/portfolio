@@ -34,7 +34,7 @@ export default function ContactSection() {
         name: formData.name,
         email: formData.email,
         message: formData.message,
-      };
+      }
 
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
 
