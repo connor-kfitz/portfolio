@@ -132,7 +132,7 @@ export default function ContactSection() {
                 ) : (
                   <>
                     Send Message
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4"/>
                   </>
                 )}
               </button>
@@ -151,19 +151,19 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-primary" />
+                    <Mail className="w-5 h-5 text-primary"/>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:connorkfitzsimmons@gmail.com" className="text-foreground font-medium hover:text-primary transition-colors">
+                    <Link href="mailto:connorkfitzsimmons@gmail.com" className="text-foreground font-medium hover:text-primary transition-colors">
                       connorkfitzsimmons@gmail.com
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-primary" />
+                    <MapPin className="w-5 h-5 text-primary"/>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>

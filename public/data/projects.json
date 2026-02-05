@@ -2,33 +2,48 @@
   {
     "id": "1",
     "name": "South West Exposures",
-    "description": "Medical isotope shield catalouge and inquiry system. Custom admin CMS for managing products and inquiries. Built for scalability",
+    "description": "Medical isotope shield catalouge and inquiry system. Custom admin content management system for adding, updating, and deleting products. Built for scalability",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    "overview": [
+      "South West Exposures is a specialized engineering and technology firm focused on creating innovative shielding solutions for sectors that work with advanced drug therapies and radiological materials.",
+      "They came to me with an existing WordPress website that no longer reflected the quality or sophistication of their work. The site suffered from poor SEO performance, inconsistent structure, and an outdated user interface that made it difficult for visitors to quickly understand their products and expertise. They wanted a completely new look and feel for the UI, along with a stronger foundation for search visibility. Just as importantly, they needed the ability to easily add and manage their own content, rather than relying on static, hard-coded pages, so their site could grow and evolve alongside the business."
+    ],
+    "keyFeatures": [
+      "Custom content management system",
+      "Product catalog with filters and sorting",
+      "Contact form powered by Resend",
+      "Responsive design for mobile and desktop",
+      "SEO optimized with dynamic meta tags",
+      "Deployed on Vercel with automated CI/CD"
+    ],
+    "challengesAndSolutions": [
+      "A major early challenge was sourcing the right creative talent to support the new design direction. The project required both a UI/UX designer to help shape the user experience and a 3D renderer to create high quality product imagery that accurately reflected SW Exposures’ offerings.",
+      "I collaborated closely with two specialists who brought deep expertise to the project. UI and UX design was led by <Link href=\"https://www.linkedin.com/in/adamrwood\">Adam Wood<Link/>, while 3D product rendering was handled by <Link href=\"https://www.linkedin.com/in/sony-chen-48433b135\">Sony Chen<Link/>. Their combined work made it possible to clearly present complex, highly technical products through a clean and consistent visual system.",
+      "Another key challenge was choosing a technology stack that could support long term growth while significantly improving SEO performance. The previous site struggled with search visibility and limited flexibility for modern optimization techniques.",
+      "Next.js was selected as the foundation for the rebuild due to its performance and SEO advantages. PostgreSQL was used as the primary database to support structured, scalable content management and future expansion. Each product page was implemented with dynamic meta tags to improve search relevance, and an automated sitemap was generated and submitted to Google Search Console. This combination created a fast, SEO focused platform that allows for easy content updates and long term maintainability."
+    ],
+    "outcomesAndResults": [
+      "Following launch, the new site delivered measurable improvements in performance, visibility, and engagement. Search visibility increased significantly, with indexed pages growing by over 60 percent and several core product pages beginning to rank within the top 10 to 20 results for relevant industry search terms. Dynamic metadata and a properly structured sitemap helped accelerate indexing through Google Search Console.",
+      "Customer engagement also improved. Overall site traffic increased by approximately 40 percent, while average time on site increased by 30 percent, indicating that users were more effectively finding and exploring relevant content. Clearer navigation and improved product presentation reduced friction for visitors and made it easier to understand SW Exposures’ offerings.",
+      "Operationally, the new platform reduced content update time by an estimated 98 percent, allowing the team to add new products and make changes without developer involvement. The scalable Next.js and PostgreSQL architecture now supports ongoing SEO optimization, future product expansion, and long term growth without the limitations of the previous system."
+    ],
     "liveUrl": "https://www.swexposures.com",
-    "repoUrl": "https://github.com/connor-kfitz/south-west-exposures"
+    "repoUrl": "https://github.com/connor-kfitz/south-west-exposures",
+    "images": [
+      "/images/projects/south-west-exposures/pip.png",
+      "/images/projects/south-west-exposures/plp.png",
+      "/images/projects/south-west-exposures/admin-products.png"
+    ]
   },
   {
     "id": "2",
     "name": "2048 Clone",
     "description": "Clone of the popular 2048 game built with React and SASS. Features smooth animations and responsive design.",
     "technologies": ["React", "SCSS"],
+    "overview": ["This project is a React-based clone of the classic game 2048, built to focus on clean state management, responsive UI design, and smooth game interactions. The implementation emphasizes predictable game logic, efficient rendering, and a polished user experience while staying true to the original mechanics of the game."],
+    "keyFeatures": ["Nested state management", "Smooth animations", "Keyboard and touch controls", "Score tracking and high score persistence", "Responsive design"],
     "liveUrl": "https://connor-kfitz.github.io/2048-clone",
-    "repoUrl": "https://github.com/connor-kfitz/2048-clone"
-  },
-  {
-    "id": "3",
-    "name": "Furniture Design Landing Page",
-    "description": "Furniture design application landing page built with React and SCSS. Showcases products, prices, and testimonials.",
-    "technologies": ["React", "SCSS"],
-    "liveUrl": "https://connor-kfitz.github.io/furniture-design-application",
-    "repoUrl": "https://github.com/connor-kfitz/furniture-design-application"
-  },
-  {
-    "id": "4",
-    "name": "E-Commerce Dashboard UI",
-    "description": "E-Commerce dashboard user interface built with HTML and SCSS. Features responsive design and minor effects.",
-    "technologies": ["HTML", "SCSS"],
-    "liveUrl": "https://connor-kfitz.github.io/e-commerce-dashboard",
-    "repoUrl": "https://github.com/connor-kfitz/e-commerce-dashboard"
+    "repoUrl": "https://github.com/connor-kfitz/2048-clone",
+    "images": ["/images/projects/2048/game.png"]
   }
 ]

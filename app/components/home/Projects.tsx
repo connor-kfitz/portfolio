@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, StickyNote } from 'lucide-react';
 
 interface ProjectsProps {
   projects: Project[];
@@ -25,7 +25,7 @@ export default function Projects({ projects }: ProjectsProps) {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="cursor-pointer group bg-card rounded-2xl p-8 card-hover border border-border"
+              className="group bg-card rounded-2xl p-8 card-hover border border-border"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex flex-col h-full">
@@ -54,6 +54,13 @@ export default function Projects({ projects }: ProjectsProps) {
                   >
                     <ExternalLink className="w-4 h-4"/>
                     Live Demo
+                  </Link>
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <StickyNote className="w-4 h-4"/>
+                    Details
                   </Link>
                   <Link
                     href={project.repoUrl}

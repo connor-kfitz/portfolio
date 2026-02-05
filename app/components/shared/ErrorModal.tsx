@@ -27,7 +27,7 @@ export default function ErrorModal({ open, title, description, onClose }: ErrorM
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose}/>
 
       <div className="relative bg-card border border-border rounded-xl shadow-card p-6 w-full max-w-md mx-4">
         <h3 className="text-xl font-bold text-card-foreground mb-2">{title}</h3>

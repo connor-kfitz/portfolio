@@ -1,5 +1,5 @@
 import Navigation from "./components/navigation/Navigation";
-import Footer from "./components/home/Footer";
+import Footer from "./components/shared/Footer";
 
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
@@ -23,10 +23,11 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
