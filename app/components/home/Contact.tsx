@@ -21,7 +21,7 @@ export default function ContactSection() {
   const [showConfirm, setShowConfirm] = useState(false);
   const [errorState, setErrorState] = useState<ModalErrorState>({ open: false, title: "", message: "" });
 
-  const SERVICE_ID = process.env.MAILJS_SERVICE_ID || "";
+  const SERVICE_ID = process.env.EMAILJS_SERVICE_ID || "";
   const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID || "";
   const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
