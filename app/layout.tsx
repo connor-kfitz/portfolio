@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Connor Fitzsimmons - Portfolio",
+  title: "Connor Fitzsimmons",
   description: "Full-stack engineer creating intuitive, user-focused web applications."
 }
 
