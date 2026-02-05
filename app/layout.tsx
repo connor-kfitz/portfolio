@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   description: "Full-stack engineer creating intuitive, user-focused web applications."
 }
 
+metadata.icons = { icon: '/favicon.svg' };
+
 export default function RootLayout({
   children
 }: Readonly<{
