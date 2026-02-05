@@ -47,7 +47,7 @@ export default function Projects({ projects }: ProjectsProps) {
                   ))}
                 </div>
                 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center flex-wrap gap-4">
                   <Link
                     href={project.liveUrl}
                     className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"

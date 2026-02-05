@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-
 import { usePathname } from "next/navigation";
+import { scrollTo } from '@/app/lib/utils';
 
 export default function Footer() {
 
@@ -17,9 +16,9 @@ export default function Footer() {
             © 2026 Connor Fitzsimmons. Built with Next & Tailwind.
           </p>
           <div className="flex items-center gap-6">
-            <Link href={onProjectsRoute ? `${pathname}#projects` :  "#hero"} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <button onClick={() => scrollTo(onProjectsRoute ? 'projects' : 'hero')} className="cursor-pointer text-sm text-muted-foreground hover:text-foreground transition-colors">
               Back to Top
-            </Link>
+            </button>
           </div>
         </div>
       </div>

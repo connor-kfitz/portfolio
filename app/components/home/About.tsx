@@ -38,7 +38,7 @@ export default function About() {
           {/* Skills Grid */}
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-6">Skills & Tools</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map((skill) => (
                 <div
                   key={skill.name}
