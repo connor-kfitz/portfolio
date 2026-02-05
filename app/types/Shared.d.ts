@@ -5,8 +5,8 @@ type Project = {
   technologies: string[];
   overview: string[];
   keyFeatures: string[];
-  challengesAndSolutions?: string[];
-  outcomesAndResults?: string[];
+  challenges?: string[];
+  outcomes?: string[];
   liveUrl: string;
   repoUrl: string;
   images: string[];

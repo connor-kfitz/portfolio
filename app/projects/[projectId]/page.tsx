@@ -30,8 +30,8 @@ export default async function ProjectInfoPage({ params }: ProjectInfoPageProps) 
         <Images images={project.images}/>
         <Overview overview={project.overview}/>
         <Features features={project.keyFeatures}/>
-        <Challenges challenges={project.challengesAndSolutions}/>
-        <Outcomes outcomes={project.outcomesAndResults}/>
+        <Challenges challenges={project.challenges}/>
+        <Outcomes outcomes={project.outcomes}/>
         <BottomNav/>
       </div>
     </main>

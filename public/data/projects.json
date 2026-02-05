@@ -16,13 +16,13 @@
       "SEO optimized with dynamic meta tags",
       "Deployed on Vercel with automated CI/CD"
     ],
-    "challengesAndSolutions": [
+    "challenges": [
       "A major early challenge was sourcing the right creative talent to support the new design direction. The project required both a UI/UX designer to help shape the user experience and a 3D renderer to create high quality product imagery that accurately reflected SW Exposures’ offerings.",
       "I collaborated closely with two specialists who brought deep expertise to the project. UI and UX design was led by <Link href=\"https://www.linkedin.com/in/adamrwood\">Adam Wood<Link/>, while 3D product rendering was handled by <Link href=\"https://www.linkedin.com/in/sony-chen-48433b135\">Sony Chen<Link/>. Their combined work made it possible to clearly present complex, highly technical products through a clean and consistent visual system.",
       "Another key challenge was choosing a technology stack that could support long term growth while significantly improving SEO performance. The previous site struggled with search visibility and limited flexibility for modern optimization techniques.",
       "Next.js was selected as the foundation for the rebuild due to its performance and SEO advantages. PostgreSQL was used as the primary database to support structured, scalable content management and future expansion. Each product page was implemented with dynamic meta tags to improve search relevance, and an automated sitemap was generated and submitted to Google Search Console. This combination created a fast, SEO focused platform that allows for easy content updates and long term maintainability."
     ],
-    "outcomesAndResults": [
+    "outcomes": [
       "Following launch, the new site delivered measurable improvements in performance, visibility, and engagement. Search visibility increased significantly, with indexed pages growing by over 60 percent and several core product pages beginning to rank within the top 10 to 20 results for relevant industry search terms. Dynamic metadata and a properly structured sitemap helped accelerate indexing through Google Search Console.",
       "Customer engagement also improved. Overall site traffic increased by approximately 40 percent, while average time on site increased by 30 percent, indicating that users were more effectively finding and exploring relevant content. Clearer navigation and improved product presentation reduced friction for visitors and made it easier to understand SW Exposures’ offerings.",
       "Operationally, the new platform reduced content update time by an estimated 98 percent, allowing the team to add new products and make changes without developer involvement. The scalable Next.js and PostgreSQL architecture now supports ongoing SEO optimization, future product expansion, and long term growth without the limitations of the previous system."
