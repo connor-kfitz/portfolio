@@ -1,10 +1,3 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-
 export function getYearsOfExperience(startYear: number): number {
   const currentYear = new Date().getFullYear();
   return currentYear - startYear;
@@ -13,6 +6,6 @@ export function getYearsOfExperience(startYear: number): number {
 export function scrollTo(id: string) {
   if (typeof document === "undefined") return;
   document.getElementById(id)?.scrollIntoView({
-    behavior: "smooth",
+    behavior: "smooth"
   });
 }

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ConfirmationModal from "../shared/ConfirmationModal";
 import ErrorModal from "../shared/ErrorModal";
-import emailjs from "@emailjs/browser";
 
 import { useState } from "react";
 import { Send, Mail, MapPin } from "lucide-react";
@@ -21,27 +20,31 @@ export default function ContactSection() {
   const [showConfirm, setShowConfirm] = useState(false);
   const [errorState, setErrorState] = useState<ModalErrorState>({ open: false, title: "", message: "" });
 
-  const SERVICE_ID = process.env.EMAILJS_SERVICE_ID || "";
-  const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID || "";
-  const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const templateParams = {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      }
+      const res = await fetch("/api/email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: "connorkfitzsimmons@gmail.com",
+          subject: "Portfolio Contact Form Message from " + formData.name,
+          html: `<p>Name: ${formData.name}</p><p>Email: ${formData.email}</p><p>Message: ${formData.message}</p>`,
+        })
+      });
 
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || 'Failed to send');
+      }
 
       setFormData({ name: "", email: "", message: "" });
       setShowConfirm(true);
     } catch (err) {
-      console.error("EmailJS error", err);
+      console.error("Email error", err);
       setErrorState({
         open: true,
         title: "Error Sending Message",
