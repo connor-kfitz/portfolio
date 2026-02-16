@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "South West Exposures",
-    "description": "Medical isotope shield catalouge and inquiry system. Custom admin content management system for adding, updating, and deleting products. Built for scalability",
+    "description": "Medical isotope shield catalouge and inquiry system. Custom admin content management system for adding, updating, and deleting products.",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
     "overview": [
       "South West Exposures is a specialized engineering and technology firm focused on creating innovative shielding solutions for sectors that work with advanced drug therapies and radiological materials.",
@@ -37,13 +37,30 @@
   },
   {
     "id": "2",
-    "name": "2048 Clone",
-    "description": "Clone of the popular 2048 game built with React and SASS. Features smooth animations and responsive design.",
-    "technologies": ["React", "SCSS"],
-    "overview": ["This project is a React-based clone of the classic game 2048, built to focus on clean state management, responsive UI design, and smooth game interactions. The implementation emphasizes predictable game logic, efficient rendering, and a polished user experience while staying true to the original mechanics of the game."],
-    "keyFeatures": ["Nested state management", "Smooth animations", "Keyboard and touch controls", "Score tracking and high score persistence", "Responsive design"],
-    "liveUrl": "https://connor-kfitz.github.io/2048-clone",
-    "repoUrl": "https://github.com/connor-kfitz/2048-clone",
-    "images": ["/images/projects/2048/game.png"]
+    "name": "Fitzsystems",
+    "description": "Software development business website. Designed to provide information on services, showecase projects, and setup a line of communication for potential clients.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "V0"],
+    "overview": [
+      "Fitzsystems is my software development business where I design and build software solutions. I have plans to launch other SAAS products under the Fitzsystems brand, so I created a strong foundation for future growth and expansion."
+    ],
+    "keyFeatures": [
+      "Modern Design inspired by ShadCN",
+      "Hero section with custom animation",
+      "Meeting scheduler integrated with Calendly",
+      "Responsive design for mobile and desktop"
+    ],
+    "challenges": [
+      "The main challenge for this project was creating a clean, modern design that effectively communicated my services and expertise without overcomplicating the development process.",
+      "To address this challenge, I leverged V0 to create a ShadCN inspiried design. I was able to iterate over versions and tweak the design to my standards and needs.",
+      "Another major challenge was the hero section background animation. I was unable to find a suitable design, even with the use of V0.",
+      "I came up with the idea of having my companies logo falling from the top of the page. After tweaking with the colors, sizes, and animation, I was able to create a unique and eye catching animation that fit the design of the site and my brand."
+    ],
+    "liveUrl": "https://fitzsystems.ca",
+    "repoUrl": "https://github.com/connor-kfitz/fitzsystems",
+    "images": [
+      "/images/projects/fitzsystems/home.png",
+      "/images/projects/fitzsystems/services.png",
+      "/images/projects/fitzsystems/contact.png"
+    ]
   }
 ]
