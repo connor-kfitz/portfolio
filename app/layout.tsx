@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrains.variable} antialiased`}
+        className={`${inter.variable} ${jetbrains.variable} antialiased min-h-screen flex flex-col`}
       >
         <Navigation/>
         {children}

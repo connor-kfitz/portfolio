@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Sushi Rice",
+    "prepTime": "15 minutes",
+    "cookTime": "45 minutes",
+    "ingredients": [
+      "1 Cup Short Grain Rice (Ibaraki Nijinokirameki)",
+      "3/4 Cup Water",
+      "2 Tbsp Rice Vinegar (Marukan)",
+      "1 Tbsp Sugar",
+      "1/2 Tsp Salt"
+    ],
+    "instructions": [
+      "Combine the rice vinegar, sugar, and salt in a small saucepan over medium-low heat, stirring until the sugar and salt fully dissolve. Remove from heat and let cool.",
+      "Wash the rice, place it in the rice cooker bowl, mix with your hands, then pour through a metal strainer. Return the rice to the bowl and repeat. Wash until the water turns clear, which takes me around 8-10 times.",
+      "Add 3/4 cup water to the washed rice and cook on the white rice setting (Cuckoo Rice Cooker).",
+      "Spread the cooked rice in a large non-metallic dish or wooden bowl. Pour the cooled vinegar mixture over the rice, then use a rice paddle to mix it in with a folding and slicing motion, cutting through clumps until everything is evenly combined."
+    ],
+    "images": []
+  },
+  {
+    "id": "2",
+    "name": "Japanese Curry",
+    "prepTime": "15 minutes",
+    "cookTime": "50 minutes",
+    "ingredients": [
+      "1 Large Onion",
+      "4 Cloves Garlic",
+      "3 Gold Potatoes",
+      "1 Tbsp Cooking Oil",
+      "1 S&B Golden Curry Cube (1/4 of the Square)",
+      "2 Cups Water",
+      "1/2 Tsp MSG",
+      "2 Tsp Chicken Stock (Better Than Bouillon Chicken)",
+      "18% Table Cream to Taste"
+    ],
+    "instructions": [
+      "Heat the cooking oil in a large pot over medium-low heat.",
+      "While the oil heats, peel and slice the onion into thin half-moons and peel and mince the garlic. Add the onion to the pot and stir occasionally until deeply caramelized, about 30 minutes. While the onions caramelize, peel the potatoes and cut into bite-sized chunks.",
+      "Once the onions are done add the garlic and cook for about a minute, until fragrant.",
+      "Add the potatoes to the pot, stirring to coat in the oil and onions.",
+      "Add the water, chicken stock, and MSG. Bring to a boil, then reduce to a simmer and cover. Cook until the potatoes are fork-tender, about 20 minutes.",
+      "Break the curry cube into the pot and stir until fully dissolved.",
+      "Simmer uncovered and stir until the sauce thickens to your liking, about 5 minutes.",
+      "Add cream until the color changes to your liking.  Then use an immersion blender to blend the sauce until smooth. Taste and adjust salt as needed."
+    ],
+    "images": []
+  }
+]

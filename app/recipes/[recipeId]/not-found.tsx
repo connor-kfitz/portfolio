@@ -3,9 +3,9 @@ import NotFoundState from "../../components/shared/NotFoundState";
 export default function NotFound() {
   return (
     <NotFoundState
-      title="Project Not Found"
-      message="The project you're looking for doesn't exist."
-      backHref="/projects"
+      title="Recipe Not Found"
+      message="The recipe you're looking for doesn't exist."
+      backHref="/recipes"
     />
   );
 }

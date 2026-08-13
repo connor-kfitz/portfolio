@@ -24,7 +24,7 @@ export default async function ProjectInfoPage({ params }: ProjectInfoPageProps) 
   const project: Project = await res.json();
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="flex-1 bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12 pt-24" id="projects">
         <Header project={project}/>
         <Images images={project.images}/>
@@ -32,7 +32,7 @@ export default async function ProjectInfoPage({ params }: ProjectInfoPageProps) 
         <Features features={project.keyFeatures}/>
         <Challenges challenges={project.challenges}/>
         <Outcomes outcomes={project.outcomes}/>
-        <BottomNav/>
+        <BottomNav href="/projects" label="View All Projects"/>
       </div>
     </main>
   );

@@ -9,10 +9,12 @@ export default async function Home() {
     cache: 'no-store'
   });
 
+  const featuredProjects: Project[] = (await projects.json()).filter((project: Project) => project.featured);
+
   return (
-    <main>
+    <main className="flex-1">
       <Hero/>
-      <Projects projects={await projects.json()}/>
+      <Projects projects={featuredProjects}/>
       <About/>
       <Contact/>
     </main>
