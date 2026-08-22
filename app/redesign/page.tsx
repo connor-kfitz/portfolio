@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { accentVariants } from "./_lib/accents";
+
 const variations = [
   {
     href: "/redesign/command-deck",
@@ -47,6 +49,34 @@ export default function RedesignIndexPage() {
               <p className="rd-label mb-4">{v.influence}</p>
               <p className="text-sm" style={{ color: "var(--rd-fg-muted)" }}>{v.description}</p>
               <span className="mt-6 text-sm font-medium" style={{ color: "var(--rd-accent)" }}>View variation →</span>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mb-4 mt-20 flex items-center justify-between">
+          <span className="rd-chip">Selected Direction</span>
+        </div>
+        <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+          Command Deck — <span style={{ color: "var(--rd-accent)" }}>3 Redder Accents</span>
+        </h2>
+        <p className="mb-10 max-w-2xl" style={{ color: "var(--rd-fg-muted)" }}>
+          Same Command Deck layout, walking the accent hue from the original orange-red toward true red.
+        </p>
+        <div className="grid gap-6 md:grid-cols-4">
+          <Link href="/redesign/command-deck" className="rd-glass group flex flex-col p-6 transition-colors hover:border-[var(--rd-border-strong)]">
+            <span className="mb-4 h-6 w-6 rounded-full" style={{ background: "hsl(16 92% 56%)" }} />
+            <h3 className="mb-1 font-bold group-hover:text-[var(--rd-accent)] transition-colors">Original</h3>
+            <p className="rd-label mb-4">hsl(16 92% 56%)</p>
+            <p className="text-sm" style={{ color: "var(--rd-fg-muted)" }}>The baseline orange-red accent.</p>
+            <span className="mt-6 text-sm font-medium" style={{ color: "var(--rd-accent)" }}>View →</span>
+          </Link>
+          {accentVariants.map((v, i) => (
+            <Link key={v.slug} href={`/redesign/${v.slug}`} className="rd-glass group flex flex-col p-6 transition-colors hover:border-[var(--rd-border-strong)]">
+              <span className="mb-4 h-6 w-6 rounded-full" style={{ background: v.swatch }} />
+              <h3 className="mb-1 font-bold group-hover:text-[var(--rd-accent)] transition-colors">{v.label} <span style={{ color: "var(--rd-fg-subtle)" }}>({i + 1}/3)</span></h3>
+              <p className="rd-label mb-4">{v.swatch}</p>
+              <p className="text-sm" style={{ color: "var(--rd-fg-muted)" }}>{v.description}</p>
+              <span className="mt-6 text-sm font-medium" style={{ color: "var(--rd-accent)" }}>View →</span>
             </Link>
           ))}
         </div>
