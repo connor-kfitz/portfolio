@@ -76,9 +76,9 @@ export default function ContactSection() {
           <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 border border-border rounded-lg p-6 bg-card/40">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="name" className="placard-label block mb-2">
                   Your Name
                 </label>
                 <input
@@ -89,12 +89,12 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   maxLength={100}
-                  className="w-full px-4 py-3 rounded-xl bg-card border border-border text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-md bg-background border border-border text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   placeholder="Your Full Name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="email" className="placard-label block mb-2">
                   Email Address
                 </label>
                 <input
@@ -105,12 +105,12 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   maxLength={254}
-                  className="w-full px-4 py-3 rounded-xl bg-card border border-border text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-md bg-background border border-border text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   placeholder="name@example.com"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="message" className="placard-label block mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -121,14 +121,14 @@ export default function ContactSection() {
                   required
                   maxLength={2000}
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl bg-card border border-border text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-md bg-background border border-border text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                   placeholder="Tell me about your request"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="cursor-pointer w-full px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="cursor-pointer w-full px-8 py-4 bg-primary text-primary-foreground rounded-md font-display font-semibold tracking-wide uppercase text-sm hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   "Sending..."
@@ -144,7 +144,7 @@ export default function ContactSection() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-lg font-semibold text-foreground mb-4">Get in Touch</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-4">Get in Touch</h3>
                 <p className="text-muted-foreground mb-6">
                   Feel free to reach out for collaborations, opportunities, or just to chat.
                   I will get back to you as soon as possible.
@@ -153,11 +153,11 @@ export default function ContactSection() {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="min-w-12 min-h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <div className="min-w-12 min-h-12 rounded-md border border-border bg-card/60 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-primary"/>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
+                    <p className="placard-label">Email</p>
                     <Link href="mailto:connorkfitzsimmons@gmail.com" className="break-all text-foreground font-medium hover:text-primary transition-colors">
                       connorkfitzsimmons@gmail.com
                     </Link>
@@ -165,24 +165,24 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="min-w-12 min-h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <div className="min-w-12 min-h-12 rounded-md border border-border bg-card/60 flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-primary"/>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
+                    <p className="placard-label">Location</p>
                     <p className="text-foreground font-medium">Ajax, ON</p>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-sm font-medium text-foreground mb-4">Follow Me</h4>
+                <h4 className="placard-label mb-4">Follow Me</h4>
                 <div className="flex items-center gap-3">
                   <Link
                     href={githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
+                    className="w-12 h-12 rounded-md bg-card/60 border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
                   >
                     <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20}/>
                   </Link>
@@ -190,7 +190,7 @@ export default function ContactSection() {
                     href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
+                    className="w-12 h-12 rounded-md bg-card/60 border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
                   >
                     <Image src="/images/home/linkedin.svg" alt="LinkedIn" width={20} height={20}/>
                   </Link>

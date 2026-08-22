@@ -15,7 +15,7 @@ export default function NotFoundState({ title, message, backHref }: NotFoundStat
         <h1 className="text-4xl font-bold text-foreground mb-4">{title}</h1>
         <p className="text-muted-foreground mb-8">{message}</p>
         <Link href={backHref}>
-          <button className="cursor-pointer inline-flex items-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 px-3 py-2 text-sm font-medium transition">
+          <button className="cursor-pointer inline-flex items-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2.5 font-display font-semibold tracking-wide uppercase text-xs transition">
             <ArrowLeft className="w-4 h-4 mr-2"/>
             Back
           </button>

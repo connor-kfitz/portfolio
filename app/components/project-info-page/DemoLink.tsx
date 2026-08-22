@@ -14,7 +14,7 @@ export default function DemoLink({ href }: DemoLinkProps) {
   
   return (
     <Link href={href} target="_blank" rel="noopener noreferrer">
-      <button className="cursor-pointer inline-flex items-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-4 text-sm font-medium transition">
+      <button className="cursor-pointer inline-flex items-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-4 font-display font-semibold tracking-wide uppercase text-xs transition">
         <ExternalLink className="w-4 h-4 mr-2"/>
         Live Demo
       </button>

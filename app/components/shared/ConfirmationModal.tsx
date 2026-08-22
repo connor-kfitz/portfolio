@@ -37,15 +37,16 @@ export default function ConfirmationModal({ open, title, description, onClose }:
         role="dialog"
         aria-modal="true"
         aria-labelledby="confirmation-modal-title"
-        className="relative bg-card border border-border rounded-xl shadow-card p-6 w-full max-w-md mx-4"
+        className="relative bg-card border border-border rounded-lg shadow-card p-6 w-full max-w-md mx-4"
       >
-        <h3 id="confirmation-modal-title" className="text-xl font-bold text-card-foreground mb-2">{title}</h3>
+        <span className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary/40 to-transparent rounded-t-lg"/>
+        <h3 id="confirmation-modal-title" className="font-display text-xl font-bold text-card-foreground mb-2 mt-1">{title}</h3>
         <p className="text-sm text-muted-foreground mb-6">{description}</p>
 
         <div className="flex justify-end">
           <button
             onClick={onClose}
-            className="cursor-pointer px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-95 transition"
+            className="cursor-pointer px-4 py-2.5 rounded-md bg-primary text-primary-foreground font-display font-semibold tracking-wide uppercase text-xs hover:opacity-95 transition"
           >
             OK
           </button>

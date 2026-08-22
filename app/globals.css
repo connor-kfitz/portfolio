@@ -1,62 +1,70 @@
 @import "tailwindcss";
 
 /* ───────────────────────────────────────────── */
-/* Theme tokens */
+/* Theme tokens — Night Instrument Panel          */
+/* Outside is ink; the panel is the only light.   */
 /* ───────────────────────────────────────────── */
 
 @theme {
-  --color-background: hsl(210 20% 98%);
-  --color-foreground: hsl(222 47% 11%);
+  --font-sans: var(--font-geist-sans), "Segoe UI", sans-serif;
+  --font-display: var(--font-display), var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222 47% 11%);
+  --color-background: hsl(220 22% 6%);
+  --color-foreground: hsl(50 18% 94%);
 
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(222 47% 11%);
+  --color-card: hsl(220 18% 9%);
+  --color-card-foreground: hsl(50 18% 94%);
 
-  --color-primary: hsl(173 80% 40%);
-  --color-primary-foreground: hsl(0 0% 100%);
+  --color-popover: hsl(220 18% 9%);
+  --color-popover-foreground: hsl(50 18% 94%);
 
-  --color-secondary: hsl(215 20% 95%);
-  --color-secondary-foreground: hsl(222 47% 11%);
+  --color-primary: hsl(142 68% 45%);
+  --color-primary-foreground: hsl(220 30% 6%);
 
-  --color-muted: hsl(215 20% 93%);
-  --color-muted-foreground: hsl(215 16% 47%);
+  --color-secondary: hsl(220 16% 14%);
+  --color-secondary-foreground: hsl(50 15% 92%);
 
-  --color-accent: hsl(173 80% 40%);
-  --color-accent-foreground: hsl(0 0% 100%);
+  --color-muted: hsl(220 16% 13%);
+  --color-muted-foreground: hsl(220 10% 62%);
 
-  --color-destructive: hsl(0 84% 60%);
-  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-accent: hsl(38 92% 55%);
+  --color-accent-foreground: hsl(220 30% 6%);
 
-  --color-border: hsl(214 32% 91%);
-  --color-input: hsl(214 32% 91%);
-  --color-ring: hsl(173 80% 40%);
+  --color-destructive: hsl(4 78% 56%);
+  --color-destructive-foreground: hsl(50 18% 96%);
 
-  --shadow-card: 0 4px 6px -1px hsl(222 47% 11% / 0.05),
-                 0 2px 4px -2px hsl(222 47% 11% / 0.05);
+  --color-border: hsl(220 15% 19%);
+  --color-input: hsl(220 15% 19%);
+  --color-ring: hsl(142 68% 45%);
 
-  --shadow-card-hover: 0 20px 25px -5px hsl(222 47% 11% / 0.1),
-                       0 8px 10px -6px hsl(222 47% 11% / 0.1);
+  --shadow-card: inset 0 1px 0 hsl(220 15% 24% / 0.6),
+                 0 1px 2px hsl(220 40% 2% / 0.5);
 
-  --gradient-hero: linear-gradient(
-    135deg,
-    hsl(215 25% 97%) 0%,
-    hsl(173 30% 95%) 50%,
-    hsl(215 25% 97%) 100%
+  --shadow-card-hover: inset 0 1px 0 hsl(220 15% 28% / 0.7),
+                       0 6px 20px hsl(220 40% 2% / 0.55),
+                       0 0 0 1px hsl(142 68% 45% / 0.15);
+
+  --gradient-hero: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    hsl(220 22% 10%) 0%,
+    hsl(220 24% 6%) 55%,
+    hsl(220 26% 4%) 100%
   );
 
-  --color-sidebar-background: hsl(0 0% 98%);
-  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
-  --color-sidebar-primary: hsl(240 5.9% 10%);
-  --color-sidebar-primary-foreground: hsl(0 0% 98%);
-  --color-sidebar-accent: hsl(240 4.8% 95.9%);
-  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --color-sidebar-border: hsl(220 13% 91%);
-  --color-sidebar-ring: hsl(173 80% 40%);
+  --color-sidebar-background: hsl(220 18% 9%);
+  --color-sidebar-foreground: hsl(50 15% 92%);
+  --color-sidebar-primary: hsl(142 68% 45%);
+  --color-sidebar-primary-foreground: hsl(220 30% 6%);
+  --color-sidebar-accent: hsl(220 16% 14%);
+  --color-sidebar-accent-foreground: hsl(50 15% 92%);
+  --color-sidebar-border: hsl(220 15% 19%);
+  --color-sidebar-ring: hsl(142 68% 45%);
 
   --animate-fade-in: fade-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-float: float 2.4s ease-in-out infinite;
+  --animate-needle: needle-settle 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-glow-pulse: glow-pulse 2.6s ease-in-out infinite;
 
   @keyframes fade-in {
     from {
@@ -77,6 +85,26 @@
       transform: translateY(6px);
     }
   }
+
+  @keyframes needle-settle {
+    from {
+      opacity: 0;
+      transform: scale(0.85) rotate(-8deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -85,8 +113,13 @@
     animation-name: fade-in-reduced;
   }
 
-  .animate-float {
+  .animate-float,
+  .animate-glow-pulse {
     animation: none;
+  }
+
+  .animate-needle {
+    animation-duration: 1ms;
   }
 
   @keyframes fade-in-reduced {
@@ -97,59 +130,6 @@
       opacity: 1;
     }
   }
-}
-
-/* ───────────────────────────────────────────── */
-/* Dark mode */
-/* ───────────────────────────────────────────── */
-
-.dark {
-  --color-background: hsl(222 47% 6%);
-  --color-foreground: hsl(210 40% 98%);
-
-  --color-card: hsl(222 47% 8%);
-  --color-card-foreground: hsl(210 40% 98%);
-
-  --color-popover: hsl(222 47% 8%);
-  --color-popover-foreground: hsl(210 40% 98%);
-
-  --color-primary: hsl(173 80% 45%);
-  --color-primary-foreground: hsl(222 47% 6%);
-
-  --color-secondary: hsl(217 33% 17%);
-  --color-secondary-foreground: hsl(210 40% 98%);
-
-  --color-muted: hsl(217 33% 17%);
-  --color-muted-foreground: hsl(215 20% 65%);
-
-  --color-accent: hsl(173 80% 45%);
-  --color-accent-foreground: hsl(222 47% 6%);
-
-  --color-destructive: hsl(0 63% 31%);
-  --color-destructive-foreground: hsl(210 40% 98%);
-
-  --color-border: hsl(217 33% 17%);
-  --color-input: hsl(217 33% 17%);
-  --color-ring: hsl(173 80% 45%);
-
-  --gradient-hero: linear-gradient(
-    135deg,
-    hsl(222 47% 6%) 0%,
-    hsl(222 40% 10%) 50%,
-    hsl(222 47% 6%) 100%
-  );
-
-  --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
-  --shadow-card-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4);
-
-  --color-sidebar-background: hsl(240 5.9% 10%);
-  --color-sidebar-foreground: hsl(240 4.8% 95.9%);
-  --color-sidebar-primary: hsl(173 80% 45%);
-  --color-sidebar-primary-foreground: hsl(0 0% 100%);
-  --color-sidebar-accent: hsl(240 3.7% 15.9%);
-  --color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --color-sidebar-border: hsl(240 3.7% 15.9%);
-  --color-sidebar-ring: hsl(173 80% 45%);
 }
 
 /* ───────────────────────────────────────────── */
@@ -165,6 +145,7 @@
 
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
 
   body {
@@ -175,8 +156,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -199,9 +181,20 @@
   }
 
   .section-title {
+    font-family: var(--font-display);
     font-size: 2.25rem;
     font-weight: 700;
+    letter-spacing: 0.01em;
     margin-bottom: 1rem;
+  }
+
+  .placard-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-muted-foreground);
   }
 
   .section-subtitle {
@@ -216,7 +209,7 @@
   }
 
   .card-hover:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-card-hover);
   }
 

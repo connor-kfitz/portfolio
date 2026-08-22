@@ -11,7 +11,7 @@ export default function Outcomes({ outcomes }: OutcomesProps) {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-bold text-foreground mb-4">Outcome & Results</h2>
-      <div className="bg-primary/10 rounded-xl p-6 border border-primary/20">
+      <div className="bg-primary/10 rounded-lg p-6 border border-primary/20">
         {Array.isArray(outcomes) ? (
           <div>
             {outcomes.map((line, idx) => (

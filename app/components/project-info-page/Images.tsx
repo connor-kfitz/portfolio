@@ -28,7 +28,7 @@ export default function Images({ images }: ImagesProps) {
 
   return (
      <section className="mb-12">
-      <div className="hidden relative sm:flex justify-center items-center bg-muted rounded-[16px] w-full aspect-[16/9]">
+      <div className="hidden relative sm:flex justify-center items-center bg-muted rounded-lg w-full aspect-[16/9]">
         {images[selectedImageIndex] &&
           <Image
             src={images[selectedImageIndex]}
@@ -65,12 +65,12 @@ export default function Images({ images }: ImagesProps) {
           modules={[Pagination]}
           pagination={{ clickable: false, el: '.custom-swiper-pagination' }}
           slidesPerView={1}
-          className="w-full aspect-[16/9] rounded-xl bg-muted"
+          className="w-full aspect-[16/9] rounded-lg bg-muted"
         >
           {images.map((image, index) => (
             <SwiperSlide
               key={image}
-              className="flex justify-center items-center rounded-xl relative"
+              className="flex justify-center items-center rounded-lg relative"
             >
               {image ? (
                 <Image
@@ -78,7 +78,7 @@ export default function Images({ images }: ImagesProps) {
                   alt={`Image ${index + 1}`}
                   width={1104}
                   height={621}
-                  className="object-contain rounded-xl"
+                  className="object-contain rounded-lg"
                 />
               ) : (
                 <div className="text-muted-foreground">No image</div>

@@ -12,7 +12,7 @@ export default function About() {
   const hiddenCount = skills.length - VISIBLE_COUNT;
 
   return (
-    <section id="about" className="bg-secondary/50">
+    <section id="about" className="bg-secondary/30">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -34,30 +34,36 @@ export default function About() {
             </div>
 
             <div className="mt-8 flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary">CF</span>
+              <div
+                className="w-14 h-14 rounded-md border border-border flex items-center justify-center font-display font-bold text-lg text-primary"
+                style={{ background: 'radial-gradient(circle at 50% 35%, hsl(220 18% 12%), hsl(220 22% 7%))' }}
+              >
+                CF
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Connor Fitzsimmons</h3>
-                <p className="text-sm text-muted-foreground">Software Engineer</p>
+                <h3 className="font-display font-semibold text-foreground">Connor Fitzsimmons</h3>
+                <p className="placard-label">Software Engineer</p>
               </div>
             </div>
           </div>
 
           {/* Skills */}
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">Skills & Tools</h3>
-            <div className="divide-y divide-border">
+            <h3 className="placard-label mb-4">Skills &amp; Tools Bank</h3>
+            <div className="border border-border rounded-lg divide-y divide-border overflow-hidden bg-card/40">
               {visibleSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="py-4 first:pt-0 flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-6"
+                  className="p-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6"
                 >
-                  <div className="flex items-center gap-2 shrink-0 sm:w-32">
-                    <skill.icon className="w-4 h-4 text-primary"/>
-                    <span className="text-sm font-medium text-foreground">{skill.name}</span>
+                  <div className="flex items-center gap-3 shrink-0 sm:w-36">
+                    <span className="w-8 h-8 rounded-md border border-border bg-background/60 flex items-center justify-center">
+                      <skill.icon className="w-4 h-4 text-primary"/>
+                    </span>
+                    <span className="font-display font-semibold text-sm text-foreground">{skill.name}</span>
+                    <span className="font-mono text-xs text-muted-foreground ml-auto sm:hidden">{skill.items.length}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="font-mono text-xs text-muted-foreground leading-relaxed">
                     {skill.items.join(" · ")}
                   </p>
                 </div>
@@ -67,7 +73,7 @@ export default function About() {
               <button
                 onClick={() => setExpanded((prev) => !prev)}
                 aria-expanded={expanded}
-                className="cursor-pointer mt-3 text-sm font-medium text-primary hover:underline"
+                className="cursor-pointer mt-3 placard-label text-primary hover:underline"
               >
                 {expanded ? "Show fewer" : `Show ${hiddenCount} more`}
               </button>

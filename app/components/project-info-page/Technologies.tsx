@@ -9,7 +9,7 @@ export default function Technologies({ technologies }: TechnologiesProps) {
   return (
     <div className="flex flex-wrap gap-2 mb-8">
       {technologies.map((tech) => (
-        <span key={tech} className="px-4 py-2 text-sm font-medium bg-secondary text-secondary-foreground rounded-full">{tech}</span>
+        <span key={tech} className="px-3 py-1.5 font-mono text-xs bg-secondary text-secondary-foreground rounded-md border border-border">{tech}</span>
       ))}
     </div>
   );

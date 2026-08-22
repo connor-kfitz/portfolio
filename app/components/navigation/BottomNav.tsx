@@ -11,7 +11,7 @@ export default function BottomNav({ href="/projects", label="View All Projects" 
   return (
     <nav className="border-t border-border pt-8 flex flex-wrap items-center gap-4">
       <Link href={href} className="w-full sm:w-auto">
-        <button className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center rounded-md h-11 px-4 text-sm font-medium border border-border text-foreground bg-transparent hover:bg-muted transition">
+        <button className="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center rounded-md h-11 px-4 font-display font-semibold tracking-wide uppercase text-xs border border-border text-foreground bg-transparent hover:bg-muted transition">
           <LayoutGrid className="w-4 h-4 mr-2"/>
           {label}
         </button>
