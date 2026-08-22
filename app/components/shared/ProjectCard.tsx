@@ -32,6 +32,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex items-center flex-wrap gap-4">
         <Link
           href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
         >
           <ExternalLink className="w-4 h-4"/>
@@ -46,6 +48,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </Link>
         <Link
           href={project.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
         >
           <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20}/>

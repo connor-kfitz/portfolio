@@ -9,7 +9,7 @@ export default function BlogPage() {
       title="Blog"
       description="My mind is an enigma"
     >
-      <EmptyState icon={NotebookText} title="No posts yet" message="Check back later."/>
+      <EmptyState icon={NotebookText} title="First post is in progress" message="Check back soon for writing on engineering and the projects behind this site."/>
     </ListPageLayout>
   );
 }

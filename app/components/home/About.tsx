@@ -1,7 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import { skills } from "@/app/lib/constants";
 import { getYearsOfExperience } from "@/app/lib/utils";
 
+const VISIBLE_COUNT = 4;
+
 export default function About() {
+  const [expanded, setExpanded] = useState(false);
+  const visibleSkills = expanded ? skills : skills.slice(0, VISIBLE_COUNT);
+  const hiddenCount = skills.length - VISIBLE_COUNT;
+
   return (
     <section id="about" className="bg-secondary/50">
       <div className="section-container">
@@ -12,7 +21,7 @@ export default function About() {
             <h2 className="section-title text-foreground">About Me</h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I&apos;m a software developer with {getYearsOfExperience(2022)}+ years of experience building web and mobile applications. 
+                I&apos;m a software developer with {getYearsOfExperience(2022)}+ years of experience building web and mobile applications.
                 I focus on solving problems with clear, practical solutions.
               </p>
               <p>
@@ -23,7 +32,7 @@ export default function About() {
                 My work emphasizes clarity, maintainability, and scalability.
               </p>
             </div>
-            
+
             <div className="mt-8 flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <span className="text-2xl font-bold text-primary">CF</span>
@@ -35,32 +44,34 @@ export default function About() {
             </div>
           </div>
 
-          {/* Skills Grid */}
+          {/* Skills */}
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-6">Skills & Tools</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {skills.map((skill) => (
+            <h3 className="text-lg font-semibold text-foreground mb-2">Skills & Tools</h3>
+            <div className="divide-y divide-border">
+              {visibleSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="p-5 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors"
+                  className="py-4 first:pt-0 flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-6"
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <skill.icon className="w-5 h-5 text-primary"/>
-                    <span className="font-medium text-card-foreground">{skill.name}</span>
+                  <div className="flex items-center gap-2 shrink-0 sm:w-32">
+                    <skill.icon className="w-4 h-4 text-primary"/>
+                    <span className="text-sm font-medium text-foreground">{skill.name}</span>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.items.map((item) => (
-                      <span
-                        key={item}
-                        className="text-xs text-muted-foreground"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {skill.items.join(" · ")}
+                  </p>
                 </div>
               ))}
             </div>
+            {hiddenCount > 0 &&
+              <button
+                onClick={() => setExpanded((prev) => !prev)}
+                aria-expanded={expanded}
+                className="cursor-pointer mt-3 text-sm font-medium text-primary hover:underline"
+              >
+                {expanded ? "Show fewer" : `Show ${hiddenCount} more`}
+              </button>
+            }
           </div>
 
         </div>

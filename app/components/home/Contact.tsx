@@ -10,7 +10,7 @@ import { Send, Mail, MapPin } from "lucide-react";
 import { githubUrl, linkedinUrl } from "@/app/lib/constants";
 
 export default function ContactSection() {
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -146,8 +146,8 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-4">Get in Touch</h3>
                 <p className="text-muted-foreground mb-6">
-                  Feel free to reach out for collaborations, opportunities, or just to chat. 
-                  I will get back to your as soon as possible.
+                  Feel free to reach out for collaborations, opportunities, or just to chat.
+                  I will get back to you as soon as possible.
                 </p>
               </div>
 
