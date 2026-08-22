@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "app/redesign/theme.css"
+        ],
+        "createdAt": "2026-08-22T22:43:08.803Z",
+        "reason": "user confirmed: explicitly requested a white-to-accent gradient on the hero surname"
+      }
+    ]
+  }
+}

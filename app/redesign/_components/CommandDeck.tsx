@@ -37,18 +37,14 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
       />
 
       {/* Nav */}
-      <header className="relative z-10 border-b" style={{ borderColor: "var(--rd-border)" }}>
+      <header className="relative z-10">
         <div className="rd-container flex items-center justify-between py-5">
           <span className="text-lg font-bold tracking-tight">CF</span>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden items-center gap-8 md:flex">
             <a href="#work" className="rd-label hover:text-[var(--rd-fg)] transition-colors">Work</a>
             <a href="#skills" className="rd-label hover:text-[var(--rd-fg)] transition-colors">Skills</a>
             <a href="#contact" className="rd-label hover:text-[var(--rd-fg)] transition-colors">Contact</a>
           </nav>
-          <span className="rd-chip">
-            <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: "var(--rd-accent)", boxShadow: "var(--rd-glow-sm)" }} />
-            Open to Opportunities
-          </span>
         </div>
       </header>
 
@@ -56,7 +52,7 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
       <section className="relative z-10 rd-container grid items-center gap-12 pb-16 pt-16 md:pt-24 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="rd-fade-up">
           <h1 className="mb-6 text-5xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
-            {firstName} <span style={{ color: "var(--rd-accent)" }}>{lastName}</span>
+            {firstName} <span className="rd-gradient-text">{lastName}</span>
           </h1>
           <p className="mb-10 max-w-xl text-lg md:text-xl" style={{ color: "var(--rd-fg-muted)" }}>
             Full-stack engineer creating <span style={{ color: "var(--rd-fg)" }}>intuitive</span>,{" "}
@@ -105,7 +101,7 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
       </section>
 
       {/* Projects */}
-      <section id="work" className="relative z-10 border-t" style={{ borderColor: "var(--rd-border)" }}>
+      <section id="work" className="relative z-10">
         <div className="rd-container py-20">
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">Featured Case Studies</h2>
           <p className="mb-12 max-w-2xl" style={{ color: "var(--rd-fg-muted)" }}>
@@ -181,7 +177,7 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="relative z-10 border-t" style={{ borderColor: "var(--rd-border)" }}>
+      <section id="skills" className="relative z-10">
         <div className="rd-container py-20">
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">Skills &amp; Tech Stack</h2>
           <p className="mb-12 max-w-2xl" style={{ color: "var(--rd-fg-muted)" }}>
@@ -208,7 +204,7 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
       </section>
 
       {/* About */}
-      <section className="relative z-10 border-t" style={{ borderColor: "var(--rd-border)" }}>
+      <section className="relative z-10">
         <div className="rd-container py-20">
           <div className="rd-glass grid gap-10 p-8 md:grid-cols-[auto_1fr] md:p-12">
             <div className="flex flex-row items-center gap-4 md:flex-col md:items-start">
@@ -233,7 +229,7 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
       </section>
 
       {/* Contact */}
-      <footer id="contact" className="relative z-10 border-t" style={{ borderColor: "var(--rd-border)" }}>
+      <footer id="contact" className="relative z-10">
         <div className="rd-container py-20">
           <div className="rd-glass rd-glass-accent grid gap-10 p-8 md:grid-cols-2 md:p-12">
             <div>
@@ -256,7 +252,6 @@ export default function CommandDeck({ accentStyle }: CommandDeckProps) {
                 <span className="rd-icon-btn"><MapPin className="h-4 w-4" /></span>
                 <span>{contactInfo.location}</span>
               </div>
-              <div className="rd-hairline my-2" />
               <p className="text-sm" style={{ color: "var(--rd-fg-subtle)" }}>© 2026 Connor Fitzsimmons. Built with Next &amp; Tailwind.</p>
             </div>
           </div>

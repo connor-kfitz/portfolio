@@ -84,6 +84,14 @@
   }
 }
 
+/* Hero surname treatment — left-to-right white-to-accent gradient */
+.rd-gradient-text {
+  background: linear-gradient(90deg, var(--rd-fg) 0%, var(--rd-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Glass panel — the recurring credibility-card surface */
 .rd-glass {
   background: var(--rd-surface);
