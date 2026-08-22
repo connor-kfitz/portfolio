@@ -26,6 +26,8 @@ export default function Navigation() {
     setMenuOpen(false);
   }
 
+  if (pathname?.startsWith('/redesign')) return null;
+
   const navLinks: NavLink[] = [
     { name: 'Projects', href: '/projects' },
     { name: 'Recipes', href: '/recipes' },

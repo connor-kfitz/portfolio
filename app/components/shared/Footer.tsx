@@ -10,6 +10,8 @@ export default function Footer() {
   const pathname = usePathname();
   const onHomeRoute = pathname === '/';
 
+  if (pathname?.startsWith('/redesign')) return null;
+
   return (
     <footer className="bg-background border-t border-border">
       <div className="max-w-6xl mx-auto px-6 py-8">
