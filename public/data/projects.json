@@ -33,8 +33,7 @@
       "/images/projects/south-west-exposures/pip.png",
       "/images/projects/south-west-exposures/plp.png",
       "/images/projects/south-west-exposures/admin-products.png"
-    ],
-    "featured": true
+    ]
   },
   {
     "id": "2",
@@ -62,7 +61,6 @@
       "/images/projects/fitzsystems/home.png",
       "/images/projects/fitzsystems/services.png",
       "/images/projects/fitzsystems/contact.png"
-    ],
-    "featured": true
+    ]
   }
 ]

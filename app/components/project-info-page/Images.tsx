@@ -50,8 +50,8 @@ export default function Images({ images }: ImagesProps) {
               </button>
 
               <div className="absolute left-1/2 -translate-x-1/2 bottom-3 z-20 flex gap-2">
-                {images.map((image, i) => (
-                  <button key={image} onClick={() => setSelectedImageIndex(i)} aria-label={`Go to slide ${i + 1}`} className={`h-2 w-8 rounded-full ${i === selectedImageIndex ? "bg-foreground" : "bg-border/50"}`}/>
+                {images.map((_, i) => (
+                  <button key={i} onClick={() => setSelectedImageIndex(i)} aria-label={`Go to slide ${i + 1}`} className={`h-2 w-8 rounded-full ${i === selectedImageIndex ? "bg-foreground" : "bg-border/50"}`}/>
                 ))}
               </div>
             </> 
@@ -69,7 +69,7 @@ export default function Images({ images }: ImagesProps) {
         >
           {images.map((image, index) => (
             <SwiperSlide
-              key={image}
+              key={index}
               className="flex justify-center items-center rounded-xl relative"
             >
               {image ? (
