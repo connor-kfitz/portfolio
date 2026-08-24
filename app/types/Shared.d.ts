@@ -10,6 +10,8 @@ type Project = {
   liveUrl: string;
   repoUrl: string;
   images: string[];
+  featured?: boolean;
+  highlight?: string;
 }
 
 type ModalErrorState = {

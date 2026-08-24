@@ -12,15 +12,14 @@ export default function About() {
             <h2 className="section-title text-foreground">About Me</h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I&apos;m a software developer with {getYearsOfExperience(2022)}+ years of experience building web and mobile applications. 
-                I focus on solving problems with clear, practical solutions.
+                I&apos;m a software developer with a background in mechatronics engineering — a foundation
+                that shapes how I approach systems thinking, problem decomposition, and long-term reliability
+                in the software I build.
               </p>
               <p>
-                My background in mechatronics engineering shapes how I approach software development.
-                It enhances systems thinking, problem decomposition, and long-term reliability.
-              </p>
-              <p>
-                My work emphasizes clarity, maintainability, and scalability.
+                With {getYearsOfExperience(2022)}+ years of experience building web and mobile applications,
+                I focus on solving problems with clear, practical solutions that emphasize clarity,
+                maintainability, and scalability.
               </p>
             </div>
             

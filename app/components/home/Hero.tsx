@@ -27,10 +27,10 @@ export default function Hero() {
             Full-stack engineer creating intuitive, user-focused web applications
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
             <button
               onClick={() => scrollTo('projects')}
-              className="cursor-pointer px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
+              className="btn-primary cursor-pointer px-8 py-4 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/20"
             >
               View My Work
             </button>

@@ -21,7 +21,7 @@
   --color-secondary-foreground: hsl(222 47% 11%);
 
   --color-muted: hsl(215 20% 93%);
-  --color-muted-foreground: hsl(215 16% 47%);
+  --color-muted-foreground: hsl(215 16% 44%);
 
   --color-accent: hsl(173 80% 40%);
   --color-accent-foreground: hsl(0 0% 100%);
@@ -45,68 +45,6 @@
     hsl(173 30% 95%) 50%,
     hsl(215 25% 97%) 100%
   );
-
-  --color-sidebar-background: hsl(0 0% 98%);
-  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
-  --color-sidebar-primary: hsl(240 5.9% 10%);
-  --color-sidebar-primary-foreground: hsl(0 0% 98%);
-  --color-sidebar-accent: hsl(240 4.8% 95.9%);
-  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --color-sidebar-border: hsl(220 13% 91%);
-  --color-sidebar-ring: hsl(173 80% 40%);
-}
-
-/* ───────────────────────────────────────────── */
-/* Dark mode */
-/* ───────────────────────────────────────────── */
-
-.dark {
-  --color-background: 222 47% 6%;
-  --color-foreground: 210 40% 98%;
-
-  --color-card: 222 47% 8%;
-  --color-card-foreground: 210 40% 98%;
-
-  --color-popover: 222 47% 8%;
-  --color-popover-foreground: 210 40% 98%;
-
-  --color-primary: 173 80% 45%;
-  --color-primary-foreground: 222 47% 6%;
-
-  --color-secondary: 217 33% 17%;
-  --color-secondary-foreground: 210 40% 98%;
-
-  --color-muted: 217 33% 17%;
-  --color-muted-foreground: 215 20% 65%;
-
-  --color-accent: 173 80% 45%;
-  --color-accent-foreground: 222 47% 6%;
-
-  --color-destructive: 0 63% 31%;
-  --color-destructive-foreground: 210 40% 98%;
-
-  --color-border: 217 33% 17%;
-  --color-input: 217 33% 17%;
-  --color-ring: 173 80% 45%;
-
---gradient-hero: linear-gradient(
-  135deg,
-  hsl(222 47% 6%) 0%,
-  hsl(222 40% 10%) 50%,
-  hsl(222 47% 6%) 100%
-);
-
-  --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
-  --shadow-card-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4);
-
-  --color-sidebar-background: 240 5.9% 10%;
-  --color-sidebar-foreground: 240 4.8% 95.9%;
-  --color-sidebar-primary: 173 80% 45%;
-  --color-sidebar-primary-foreground: 0 0% 100%;
-  --color-sidebar-accent: 240 3.7% 15.9%;
-  --color-sidebar-accent-foreground: 240 4.8% 95.9%;
-  --color-sidebar-border: 240 3.7% 15.9%;
-  --color-sidebar-ring: 173 80% 45%;
 }
 
 /* ───────────────────────────────────────────── */
@@ -117,7 +55,7 @@
   *,
   ::before,
   ::after {
-    border-color: hsl(var(--color-border));
+    border-color: var(--color-border);
   }
 
   html {
@@ -126,8 +64,8 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: hsl(var(--color-background));
-    color: hsl(var(--color-foreground));
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -162,7 +100,7 @@
   }
 
   .section-subtitle {
-    color: hsl(var(--color-muted-foreground));
+    color: var(--color-muted-foreground);
     font-size: 1.125rem;
     margin-bottom: 3rem;
   }
@@ -180,8 +118,8 @@
   .gradient-text {
     background-image: linear-gradient(
       to right,
-      hsl(var(--color-primary)),
-      hsl(var(--color-accent))
+      var(--color-primary),
+      var(--color-accent)
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -189,24 +127,13 @@
   }
 
   .btn-primary {
-    background-color: hsl(var(--color-primary));
-    color: hsl(var(--color-primary-foreground));
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
     transition: opacity 200ms ease;
   }
 
   .btn-primary:hover {
     opacity: 0.9;
-  }
-
-  .btn-outline {
-    border: 2px solid hsl(var(--color-primary));
-    color: hsl(var(--color-primary));
-    transition: all 200ms ease;
-  }
-
-  .btn-outline:hover {
-    background-color: hsl(var(--color-primary));
-    color: hsl(var(--color-primary-foreground));
   }
 }
 

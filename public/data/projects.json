@@ -2,8 +2,10 @@
   {
     "id": "1",
     "name": "South West Exposures",
-    "description": "Medical isotope shield catalouge and inquiry system. Custom admin content management system for adding, updating, and deleting products.",
+    "description": "Medical isotope shield catalog and inquiry system. Custom admin content management system for adding, updating, and deleting products.",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    "featured": true,
+    "highlight": "+60% indexed pages · 98% faster content updates",
     "overview": [
       "South West Exposures is a specialized engineering and technology firm focused on creating innovative shielding solutions for sectors that work with advanced drug therapies and radiological materials.",
       "They came to me with an existing WordPress website that no longer reflected the quality or sophistication of their work. The site suffered from poor SEO performance, inconsistent structure, and an outdated user interface that made it difficult for visitors to quickly understand their products and expertise. They wanted a completely new look and feel for the UI, along with a stronger foundation for search visibility. Just as importantly, they needed the ability to easily add and manage their own content, rather than relying on static, hard-coded pages, so their site could grow and evolve alongside the business."
@@ -38,8 +40,9 @@
   {
     "id": "2",
     "name": "Fitzsystems",
-    "description": "Software development business website. Designed to provide information on services, showecase projects, and setup a line of communication for potential clients.",
+    "description": "Software development business website. Designed to provide information on services, showcase projects, and setup a line of communication for potential clients.",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "V0"],
+    "featured": true,
     "overview": [
       "Fitzsystems is my software development business where I design and build software solutions. I have plans to launch other SAAS products under the Fitzsystems brand, so I created a strong foundation for future growth and expansion."
     ],
@@ -51,7 +54,7 @@
     ],
     "challenges": [
       "The main challenge for this project was creating a clean, modern design that effectively communicated my services and expertise without overcomplicating the development process.",
-      "To address this challenge, I leverged V0 to create a ShadCN inspiried design. I was able to iterate over versions and tweak the design to my standards and needs.",
+      "To address this challenge, I leveraged V0 to create a ShadCN inspired design. I was able to iterate over versions and tweak the design to my standards and needs.",
       "Another major challenge was the hero section background animation. I was unable to find a suitable design, even with the use of V0.",
       "I came up with the idea of having my companies logo falling from the top of the page. After tweaking with the colors, sizes, and animation, I was able to create a unique and eye catching animation that fit the design of the site and my brand."
     ],

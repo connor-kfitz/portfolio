@@ -128,7 +128,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="cursor-pointer w-full px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="btn-primary cursor-pointer w-full px-8 py-4 rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   "Sending..."
@@ -146,8 +146,8 @@ export default function ContactSection() {
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-4">Get in Touch</h3>
                 <p className="text-muted-foreground mb-6">
-                  Feel free to reach out for collaborations, opportunities, or just to chat. 
-                  I will get back to your as soon as possible.
+                  Feel free to reach out for collaborations, opportunities, or just to chat.
+                  I will get back to you as soon as possible.
                 </p>
               </div>
 
