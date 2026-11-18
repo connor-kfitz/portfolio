@@ -16,6 +16,8 @@ export default function ContactSection() {
     email: "",
     message: "",
   });
+  const [honeypot, setHoneypot] = useState("");
+  const [startedAt, setStartedAt] = useState(() => Date.now());
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [errorState, setErrorState] = useState<ModalErrorState>({ open: false, title: "", message: "" });
@@ -30,9 +32,9 @@ export default function ContactSection() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: "connorkfitzsimmons@gmail.com",
-          subject: "Portfolio Contact Form Message from " + formData.name,
-          html: `<p>Name: ${formData.name}</p><p>Email: ${formData.email}</p><p>Message: ${formData.message}</p>`,
+          ...formData,
+          website: honeypot,
+          startedAt
         })
       });
 
@@ -42,6 +44,7 @@ export default function ContactSection() {
       }
 
       setFormData({ name: "", email: "", message: "" });
+      setStartedAt(Date.now());
       setShowConfirm(true);
     } catch (err) {
       console.error("Email error", err);
@@ -77,6 +80,18 @@ export default function ContactSection() {
 
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
+              <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Your Name
