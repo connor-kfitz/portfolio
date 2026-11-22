@@ -50,7 +50,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20}/>
+              <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20} className="dark:invert"/>
             </Link>
             <Link
               href={linkedinUrl}
@@ -58,7 +58,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              <Image src="/images/home/linkedin.svg" alt="LinkedIn" width={20} height={20}/>
+              <Image src="/images/home/linkedin.svg" alt="LinkedIn" width={20} height={20} className="dark:invert"/>
             </Link>
           </div>
         </div>

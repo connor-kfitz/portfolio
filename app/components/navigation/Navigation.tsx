@@ -6,6 +6,7 @@ import { ArrowLeft, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { scrollTo } from '@/app/lib/utils';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
 
@@ -89,24 +90,31 @@ export default function Navigation() {
                     {link.name}
                   </button>
                 ))}
+                <ThemeToggle/>
               </div>
-              <button
-                onClick={() => setMenuOpen((open) => !open)}
-                className="cursor-pointer md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md text-foreground hover:bg-muted transition-colors"
-                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-                aria-expanded={menuOpen}
-              >
-                {menuOpen ? <X className="w-5 h-5"/> : <Menu className="w-5 h-5"/>}
-              </button>
+              <div className="md:hidden flex items-center gap-1">
+                <ThemeToggle/>
+                <button
+                  onClick={() => setMenuOpen((open) => !open)}
+                  className="cursor-pointer inline-flex items-center justify-center w-10 h-10 rounded-md text-foreground hover:bg-muted transition-colors"
+                  aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                  aria-expanded={menuOpen}
+                >
+                  {menuOpen ? <X className="w-5 h-5"/> : <Menu className="w-5 h-5"/>}
+                </button>
+              </div>
             </>
           // Project Details Nav Link
-          : <Link
-              href="/#projects"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4"/>
-              Back
-            </Link>
+          : <>
+              <Link
+                href="/#projects"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4"/>
+                Back
+              </Link>
+              <ThemeToggle/>
+            </>
           }
       </div>
 

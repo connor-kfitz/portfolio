@@ -199,7 +199,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
                   >
-                    <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20}/>
+                    <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20} className="dark:invert"/>
                   </Link>
                   <Link
                     href={linkedinUrl}
@@ -207,7 +207,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
                   >
-                    <Image src="/images/home/linkedin.svg" alt="LinkedIn" width={20} height={20}/>
+                    <Image src="/images/home/linkedin.svg" alt="LinkedIn" width={20} height={20} className="dark:invert"/>
                   </Link>
                 </div>
               </div>

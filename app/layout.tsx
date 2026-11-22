@@ -4,6 +4,8 @@ import Footer from "./components/shared/Footer";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
+import { themeInitScript } from "./lib/theme";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -31,7 +33,10 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }}/>
+      </head>
       <body
         className={`${inter.variable} ${jetbrains.variable} antialiased`}
       >

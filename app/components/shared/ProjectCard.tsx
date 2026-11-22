@@ -58,7 +58,7 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
             href={project.repoUrl}
             className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20}/>
+            <Image src="/images/home/github.svg" alt="GitHub" width={20} height={20} className="dark:invert"/>
             Source Code
           </Link>
         </div>
