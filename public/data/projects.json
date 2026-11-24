@@ -1,5 +1,44 @@
 [
   {
+    "id": "3",
+    "name": "Synergy QMP",
+    "description": "Bilingual training and certification portal for the Transportation of Dangerous Goods, Class 7. Students study, take a timed exam, and download their certificate, while admins manage everything from a dashboard.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Better Auth"],
+    "featured": true,
+    "highlight": "1,200+ students · 1,500 enrollments migrated",
+    "overview": [
+      "Synergy QMP provides online training and certification in the Transportation of Dangerous Goods, Class 7 (radioactive materials) for nuclear medicine, radiopharmacy, and research staff across Canada. Students sign in, read the course material, take the exam, and download a certificate their employer can trust.",
+      "Their existing platform was a WordPress site from 2017 paired with a separate PHP application for exams. The plugins no longer received security fixes, course PDFs and the exam answer file could be downloaded by anyone with the link, and student passwords were stored as unsalted MD5 hashes. I rebuilt it as a single Next.js application with a modern public site, a student area, and a full admin panel, all in English and French."
+    ],
+    "keyFeatures": [
+      "Fully bilingual (English and French) with locale prefixed routes",
+      "Timed exams with answers saved as you go and server enforced time limits",
+      "Certificate PDFs generated in the course language with unique certificate numbers",
+      "Course material served only to signed in, enrolled students",
+      "Admin dashboard with charts, user management, CSV import, question banks, and an audit log",
+      "Light and dark mode admin panel",
+      "Old URLs forwarded to their new pages to preserve search rankings",
+      "Deployed on Vercel with database migrations applied during production builds"
+    ],
+    "challenges": [
+      "The biggest challenge was moving over years of existing data without disrupting active students. The legacy MySQL database held more than 1,200 students, 1,500 enrollments, 860 past exam attempts, and the full question bank, spread across two systems with inconsistent structure.",
+      "I wrote a migration script that parses the legacy dump, builds a migration plan, and produces a report before anything is written. Dry runs against a separate database branch let me rehearse the migration until every past answer was matched to its question. Passwords were the trickiest part. Rather than forcing every student to reset, the new auth layer verifies the old MD5 hash on first sign in and transparently upgrades it to modern hashing.",
+      "The exam itself also needed to be reliable. Students often take it between clinical shifts, so a dropped connection or accidental refresh could not cost them an attempt. Each answer is saved to the server as it is selected, the attempt resumes exactly where it left off, and the deadline is enforced on the server rather than trusting the browser's timer.",
+      "Finally, everything had to work in two languages from the start. Every page, email, exam, and certificate exists in both English and French, and the language switch keeps students on the same page."
+    ],
+    "outcomes": [
+      "Synergy QMP now runs on a single, maintainable platform instead of two aging systems. The security issues of the old site are gone: course material and exam content are only available to enrolled students, passwords are properly hashed, and each admin has their own account with every change recorded in an audit log.",
+      "Every existing student moved over with their history intact and could sign in with their existing password. Admins can now add students in bulk, adjust exam rules, edit question banks, and reissue certificates on their own, without developer involvement."
+    ],
+    "liveUrl": "https://www.synergyqmp.com",
+    "repoUrl": "https://github.com/fitz-systems/synergy-qmp",
+    "images": [
+      "/images/projects/synergy-qmp/home.png",
+      "/images/projects/synergy-qmp/exam.png",
+      "/images/projects/synergy-qmp/admin-dashboard.png"
+    ]
+  },
+  {
     "id": "1",
     "name": "South West Exposures",
     "description": "Medical isotope shield catalog and inquiry system. Custom admin content management system for adding, updating, and deleting products.",

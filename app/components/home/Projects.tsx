@@ -25,7 +25,7 @@ export default function Projects({ projects }: ProjectsProps) {
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} animationDelay={index * 100}/>
           ))}
